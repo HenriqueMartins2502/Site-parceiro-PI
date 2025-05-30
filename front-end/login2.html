@@ -29,7 +29,7 @@
             position: relative;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
             max-width: 90%;
-            width: 300px; /* Ajuste a largura conforme necessário */
+            width: 300px; /* Ajustar a largura conforme necessário */
         }
 
         .close-btn {
@@ -49,7 +49,6 @@
             cursor: pointer;
         }
 
-        /* Seus estilos .bodyForms e .rectangleForms devem estar em base.css */
     </style>
   </head>
   
@@ -80,13 +79,13 @@
   
 
     <script>
-        // URLs das suas funções Firebase
+        // URLs das minhas funções Firebase
         const PERFORM_AUTH_FUNCTION_URL = "https://performauth-doos7adaja-uc.a.run.app";
         const GET_LOGIN_STATUS_FUNCTION_URL = "https://us-central1-superid-66b3d.cloudfunctions.net/getLoginStatus"; // Nova URL!
 
         // Credenciais do parceiro (Document ID da coleção 'partners' e a API Key)
         const PARTNER_SITE_ID = "127.0.0.1:5501"; 
-        const API_KEY = "123456789"; // SUBSTITUA PELA SUA CHAVE REAL
+        const API_KEY = "123456789"; // chave real
 
         let loginStatusTimeout; // Variável para armazenar o ID do timeout para o próximo polling
         let currentLoginTokenId = null; // Variável para armazenar o loginTokenId atual
@@ -130,7 +129,7 @@
                     document.getElementById("qrcode").src = `data:image/png;base64,${data.qrCodeBase64}`;
                     document.getElementById("statusMessage").textContent = "Escaneie o QR Code com o app SuperID:";
 
-                    // INICIA O POLLING PARA VERIFICAR O STATUS DO LOGIN
+                    // Inicia o polling para verificar status de login 
                     // Chama a primeira verificação imediatamente
                     checkLoginStatus(); 
 
